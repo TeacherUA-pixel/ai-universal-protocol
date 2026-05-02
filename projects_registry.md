@@ -16,6 +16,10 @@
    - Роль: Візуальне програмування та локалізація.
    - Стек: JavaScript, i18n.
 
+4. **quick-feedback-classroom**
+   - Роль: Розширення Chrome для швидких коментарів у Google Classroom.
+   - Стек: Chrome Extension Manifest V3, JavaScript, HTML, CSS.
+
 ## Протокол додавання нового проєкту
 - Кожен новий проєкт має містити файл `.antigravityrules`, який посилається на `ai-universal-protocol`.
 - Всі проєкти мають бути додані в цей список.
