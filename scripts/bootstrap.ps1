@@ -1,40 +1,43 @@
 <#
 .SYNOPSIS
-    Advanced Bootstrap script for AI Engineering Environment.
+    Universal AI-DNA Bootstrap Script.
+    Initializes the environment and checks for prerequisites.
 #>
 
-$RepoUrl = "https://github.com/TeacherUA-pixel/ai-universal-protocol.git"
 $AppRootDir = "$HOME\.gemini\antigravity"
 $KnowledgeDir = "$AppRootDir\knowledge"
 
-Write-Host "`n[ INITIALIZING AI-DNA ENVIRONMENT ]" -ForegroundColor Cyan
-Write-Host "Device: $env:COMPUTERNAME" -ForegroundColor Gray
+Write-Host "`n[ INITIALIZING UNIVERSAL AI-DNA ]" -ForegroundColor Cyan
 
-# 1. Directory Setup
-if (-not (Test-Path $KnowledgeDir)) {
-    New-Item -ItemType Directory -Path $KnowledgeDir -Force | Out-Null
-    Write-Host "[+] Created knowledge directory"
+# 1. System Requirements Check
+function Check-Requirement ($Command, $Name) {
+    if (Get-Command $Command -ErrorAction SilentlyContinue) {
+        Write-Host "[OK] $Name is installed" -ForegroundColor Green
+    } else {
+        Write-Host "[!] $Name NOT FOUND. Please install it." -ForegroundColor Red
+    }
 }
 
-# 2. Sync Protocol Files
+Check-Requirement "node" "Node.js"
+Check-Requirement "git" "Git"
+Check-Requirement "docker" "Docker"
+
+# 2. Sync Core Assets
 $SourceDir = "$PSScriptRoot\.."
-$FilesToSync = @("CORE_PROTOCOL.md", "README.md")
+$KnowledgeSource = "$SourceDir\knowledge"
 
-foreach ($file in $FilesToSync) {
-    if (Test-Path "$SourceDir\$file") {
-        Copy-Item "$SourceDir\$file" "$KnowledgeDir\$file" -Force
-        Write-Host "[*] Synced Protocol: $file"
-    }
-}
+if (-not (Test-Path $KnowledgeDir)) { New-Item -ItemType Directory -Path $KnowledgeDir -Force | Out-Null }
 
-# 3. Sync Knowledge Library
-$KnowledgeSource = "$PSScriptRoot\..\knowledge"
+Write-Host "`n[ SYNCING PROTOCOLS ]" -ForegroundColor Cyan
+Copy-Item "$SourceDir\CORE_PROTOCOL.md" "$KnowledgeDir\CORE_PROTOCOL.md" -Force
+Copy-Item "$SourceDir\projects_registry.md" "$KnowledgeDir\projects_registry.md" -Force
+
 if (Test-Path $KnowledgeSource) {
-    Get-ChildItem -Path $KnowledgeSource -Filter "*.md" | ForEach-Object {
+    Get-ChildItem $KnowledgeSource -Filter "*.md" | ForEach-Object {
         Copy-Item $_.FullName "$KnowledgeDir\$($_.Name)" -Force
-        Write-Host "[*] Synced Knowledge: $($_.Name)"
+        Write-Host "[*] Synced: $($_.Name)"
     }
 }
 
-Write-Host "`n[SUCCESS] AI-DNA Protocol is now ACTIVE on this machine." -ForegroundColor Green
-Write-Host "Action required: Ensure your AI Agent reads CORE_PROTOCOL.md before starting work." -ForegroundColor Yellow
+Write-Host "`n[SUCCESS] Environment Standardized." -ForegroundColor Green
+Write-Host "Action: Read CORE_PROTOCOL.md before starting any project." -ForegroundColor Yellow
