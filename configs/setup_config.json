@@ -1,0 +1,10 @@
+{
+  "workDir": "C:\\Users\\teach\\Documents\\AI-Projects",
+  "vscodeExtensions": [
+    "saoudrizwan.claude-dev",
+    "github.copilot",
+    "github.copilot-chat",
+    "esbenp.prettier-vscode"
+  ],
+  "mcpConfigPath": "$env:APPDATA\\Code\\User\\globalStorage\\saoudrizwan.claude-dev\\settings\\cline_mcp_settings.json"
+}
