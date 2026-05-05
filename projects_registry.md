@@ -1,25 +1,38 @@
 # Project Registry
 
-Реєстр усіх приватних проєктів акаунта TeacherUA-pixel. 
-Це допомагає мені розуміти контекст кожного проєкту без додаткового пошуку.
+Registry of private projects for the TeacherUA-pixel account.
 
-## Основні проєкти
+## Active Projects
+
 1. **ai-universal-protocol**
-   - Роль: Глобальні налаштування та ШІ-ДНК.
+   - Role: Global settings and AI-DNA.
+   - Path: `ai-protocol-sync/`
    - GitHub: https://github.com/TeacherUA-pixel/ai-universal-protocol
 
 2. **privat24-bonds-parser**
-   - Роль: Аналіз та візуалізація ОВДП.
-   - Стек: Vite, React, Firebase, Playwright.
+   - Role: Analysis and visualization of OVDP bonds.
+   - Stack: Vite, React, Firebase, Playwright.
 
 3. **flowgorithm-web**
-   - Роль: Візуальне програмування та локалізація.
-   - Стек: JavaScript, i18n.
+   - Role: Visual programming and localization.
+   - Stack: JavaScript, i18n.
 
 4. **quick-feedback-classroom**
-   - Роль: Розширення Chrome для швидких коментарів у Google Classroom.
-   - Стек: Chrome Extension Manifest V3, JavaScript, HTML, CSS.
+   - Role: Chrome extension for quick feedback in Google Classroom.
+   - Stack: Chrome Extension Manifest V3, JavaScript, HTML, CSS.
 
-## Протокол додавання нового проєкту
-- Кожен новий проєкт має містити файл `.antigravityrules`, який посилається на `ai-universal-protocol`.
-- Всі проєкти мають бути додані в цей список.
+5. **stem-project-architect-gem**
+   - Role: Architect for STEM-based educational projects.
+   - Stack: AI-driven, Python/JavaScript.
+
+6. **bond-ladder-ua**
+   - Role: Visualization of the Ukrainian government bond ladder (OVDP).
+   - Stack: Vite, React, Tailwind CSS (Design matching Liquid Glass).
+
+7. **vita-stem-project**
+   - Role: Educational inquiry-based project for high school students.
+   - Stack: HTML5, CSS3, JavaScript, Gemini API.
+
+## Protocol for New Projects
+- Each new project must contain an `.antigravityrules` file referencing `ai-universal-protocol`.
+- New projects must be added to this registry immediately with stack and role descriptions.
