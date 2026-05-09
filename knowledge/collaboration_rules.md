@@ -18,7 +18,6 @@ Every response must start with the phrase: **"I remember."**
 7.  **Privacy First**: All new GitHub repositories must be created as **PRIVATE** by default.
 8.  **Git CLI over MCP GitHub**: For git operations — always use `run_command` with git CLI. Use MCP GitHub only for API-only operations (create repo, PR, issues).
 9.  **Browser Rule**: БРАУЗЕР (browser_subagent): ТІЛЬКИ за прямою командою користувача. Автоматична перевірка заборонена. Для читання контенту — `read_url_content`.
-10. **Ink Glass Aesthetic**: All new web applications and UI redesigns must follow the **Ink Glass** design system (monochrome, high contrast, subtle glassmorphism) for a premium, cohesive ecosystem.
 
 ## 4. Karpathy Coding Skills
 - **Think Before Coding**: Explicit assumptions, ambiguity checks.

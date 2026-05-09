@@ -27,7 +27,7 @@ Registry of private projects for the TeacherUA-pixel account.
 
 6. **bond-ladder-ua**
    - Role: Visualization of the Ukrainian government bond ladder (OVDP).
-   - Stack: Vite, React, Tailwind CSS (Design matching Liquid Glass).
+   - Stack: Vite, React, Tailwind CSS.
 
 7. **vita-stem-project**
    - Role: Educational inquiry-based 4-lesson project for high school students. Inquiry-driven simulations, 10-point scoring, 12 topics across 3 sub-projects.
@@ -46,7 +46,7 @@ Registry of private projects for the TeacherUA-pixel account.
 10. **shopping-list-pwa**
     - Role: Family shopping list with offline support.
     - Status: Refactored into modular components and hooks for maximum token efficiency.
-    - Stack: Vite, React, Zustand, Firestore, Ink Glass Design System.
+    - Stack: Vite, React, Zustand, Firestore, Ink Glass Design (Optional).
 
 11. **micro-scalper-bot**
     - Role: Python-based grid trading bot for crypto.
