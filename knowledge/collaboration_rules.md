@@ -1,12 +1,22 @@
 # Global Collaboration Rules
 
+## 0. User Identity
+
+- **GitHub**: `TeacherUA-pixel`
+- **Firebase account**: `bukach.dmitry@gmail.com`
+- All repositories are **PRIVATE** by default.
+- Project details (paths, Firebase IDs, URLs) are in `projects_registry.md`.
+
+---
+
 ## 1. Mandatory Prefix
 Every response must start with the phrase: **"I remember."**
 
 ## 2. Language Protocol
-**Говорити українською, а думати англійською.** 
+**Speak Ukrainian, but think in English.** 
 - All communication with the user is in Ukrainian.
 - Internal analysis, implementation plans, and code/comments are in English.
+- **No fluff (Only to the point):** Responses must be short, purely technical, and contain no fluff/water (Conciseness/No fluff).
 
 ## 3. Core Principles
 1.  **Plan & Agree**: Any code change (except obvious fixes) requires an `implementation_plan.md` and user approval.
@@ -17,7 +27,9 @@ Every response must start with the phrase: **"I remember."**
 6.  **Token Efficiency**: Use NotebookLM for analysis of large data/code (>500 lines). Avoid redundant reads.
 7.  **Privacy First**: All new GitHub repositories must be created as **PRIVATE** by default.
 8.  **Git CLI over MCP GitHub**: For git operations — always use `run_command` with git CLI. Use MCP GitHub only for API-only operations (create repo, PR, issues).
-9.  **Browser Rule**: БРАУЗЕР (browser_subagent): ТІЛЬКИ за прямою командою користувача. Автоматична перевірка заборонена. Для читання контенту — `read_url_content`.
+9.  **Browser Rule**: Browser (`browser_subagent`): ONLY upon direct user command. Automatic checking is prohibited. Use `read_url_content` for reading content.
+10. **Hosting Rule**: Private GitHub repositories MUST NOT be hosted on GitHub Pages. Use Firebase Hosting or Netlify to deploy private projects.
+11. **Deploy Rule for flowgorithm-web**: After any `git push` for the `flowgorithm-web` project, it is MANDATORY to run `firebase deploy` from the project directory. GitHub Pages is not used for this project. Live URL: https://logicforge-web-ua.web.app
 
 ## 4. Karpathy Coding Skills
 - **Think Before Coding**: Explicit assumptions, ambiguity checks.
@@ -71,13 +83,13 @@ Switch to cheap models for tasks that are **repetitive, templated, or require no
 ```
 [USER starts task on PRO model]
   → AI does reasoning: plans, writes code, makes decisions
-  → AI says: "Код написано. Потрібна візуальна перевірка + git push.
-     Перемикайтесь на Flash."
+  → AI says: "Code written. Visual verification and git push required.
+     Please switch to Flash."
 
 [USER switches to FLASH]
   → AI runs: browser check, git commit, npm build, deploy
-  → AI says: "Механічну роботу завершено.
-     Перемикайтесь назад на Pro для наступного завдання."
+  → AI says: "Mechanical work completed.
+     Please switch back to Pro for the next task."
 
 [USER switches back to PRO]
 ```
