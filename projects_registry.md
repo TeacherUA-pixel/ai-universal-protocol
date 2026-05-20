@@ -61,6 +61,10 @@ Registry of private projects for the TeacherUA-pixel account.
     - Role: Tooling for maintaining parity between Claude and other model outputs during multi-model development.
     - Stack: Node.js/Python scripts.
 
+14. **olgisky-database**
+    - Role: Student database management system for a lyceum. Includes Authentication, Dashboard, and Google Sheets synchronization.
+    - Stack: React, Vite, Tailwind CSS, Zustand, Firebase (Auth, Firestore, Cloud Functions).
+
 ## Protocol for New Projects
 - Each new project must contain an `.antigravityrules` file referencing `ai-universal-protocol`.
 - New projects must be added to this registry immediately with stack and role descriptions.
