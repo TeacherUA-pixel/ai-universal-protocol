@@ -65,6 +65,15 @@ Registry of private projects for the TeacherUA-pixel account.
     - Role: Student database management system for a lyceum. Includes Authentication, Dashboard, and Google Sheets synchronization.
     - Stack: React, Vite, Tailwind CSS, Zustand, Firebase (Auth, Firestore, Cloud Functions).
 
+15. **gws-admin**
+    - Role: Android APK for full Google Workspace for Education administration. Multi-account, Google Sheets sync, RBAC.
+    - Stack: React Native (Expo), TypeScript, Zustand, react-native-paper (Google Material 3).
+
+16. **vector-admin**
+    - Role: Admin panel for Vector UIED platform (SPK 738). Bulk enrollment approval, financing filtration, automated background approvals, certificate generation, and Inno Setup Windows installer.
+    - Stack: Python (FastAPI), HTML5, Tailwind CSS, JavaScript (ES modules), PyInstaller, Inno Setup 6.
+    - GitHub: https://github.com/TeacherUA-pixel/vector-admin (PRIVATE)
+
 ## Protocol for New Projects
 - Each new project must contain an `.antigravityrules` file referencing `ai-universal-protocol`.
 - New projects must be added to this registry immediately with stack and role descriptions.
